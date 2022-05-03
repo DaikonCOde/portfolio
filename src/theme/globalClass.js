@@ -9,8 +9,7 @@ export const GlobalClass = createGlobalStyle`
   .content-views {
     border: 1px solid ${ ({theme}) => theme.colors.lines };
     border-top: none;
-    height: 100%;
-    border-radius: 0 0 8px 8px;
+    min-height: calc(100vh - 88px);
     padding: 20px;
   }
   h1, h2, h3, h4, h5, h6 {
@@ -66,7 +65,7 @@ ${'' /* titles */}
     color: ${ ({theme}) => theme.colors.secondary[4] };
   }
 
-  .description {
+  .description, .paragraph {
     font-size: ${ ({theme}) => theme.font_size[14] };
     font-weight: 500;
     color: ${ ({theme}) => theme.colors.secondary[6] };
@@ -101,6 +100,7 @@ ${'' /* code */}
     color: ${ ({theme}) => theme.colors.secondary[6] };
   }
   .code {
+    margin: 10px 0;
     .const {
       color: ${ ({theme}) => theme.colors.secondary[3] };
     }

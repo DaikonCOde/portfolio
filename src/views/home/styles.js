@@ -5,7 +5,7 @@ export const ContentHome = styled.div`
   height: 100%;
 
   .hero {
-    margin: 90px auto;
+    margin: 90px auto 140px;
     position: relative;
     .specialization {
       display: block;
@@ -19,6 +19,10 @@ export const ContentHome = styled.div`
       left: 10px;
       transform: rotate(-45deg);
     }
+  }
+
+  .download-cv {
+    
   }
 
 `

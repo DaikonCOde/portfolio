@@ -18,7 +18,7 @@ const Home = () => {
           <span className="second"></span>
         </span>
       </div>
-      <div className="find-me">
+      <div className="download-cv">
         <span className="comment">// descarga mi CV</span>
         <p className="code">
           <span className="const">const </span>
