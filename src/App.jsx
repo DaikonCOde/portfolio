@@ -9,7 +9,7 @@ import Router from './router';
 function App() {
   
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Theme>
       <div className="content-app">
         <Header />
@@ -17,7 +17,7 @@ function App() {
         <Footer />
       </div>
       </Theme>
-    </HashRouter>
+    </BrowserRouter>
   )
 }
 
