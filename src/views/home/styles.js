@@ -22,7 +22,9 @@ export const ContentHome = styled.div`
   }
 
   .download-cv {
-    
+    .code .value {
+      text-decoration: underline;
+    } 
   }
 
 `

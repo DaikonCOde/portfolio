@@ -22,7 +22,26 @@ export const ContentProjects = styled.div`
       .content-img {
         height: 150px;
         width: 100%;
-        background: #333;
+        border-bottom: 1px solid ${ ({theme}) => theme.colors.lines  };
+        position: relative;
+        img {
+          width: 100%;
+          height: 150px;
+          object-fit: cover;
+        }
+
+        .technology {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          color: ${ ({theme}) => theme.colors.gradients[2] };
+          font-weight: 600;
+          font-size: ${ ({theme}) => theme.font_size[14] };
+          display: block;
+          padding: 2px 8px;
+          border-radius: 4px;
+          background: ${ ({theme}) => theme.colors.gradients[1] };
+        }
       }
 
       .content-info {

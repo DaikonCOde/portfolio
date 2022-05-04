@@ -8,12 +8,12 @@ const listSocialMedia = [
   {
     id: 'linkedin',
     icon: RiLinkedinBoxFill,
-    href: '#'
+    href: 'https://linkedin.com/in/alexryzsard-ol'
   },
   {
     id: 'github',
     icon: RiGithubFill,
-    href: '#'
+    href: 'https://github.com/DaikonCOde'
   },
   {
     id: 'instagram',
@@ -31,11 +31,11 @@ const Footer = () => {
       </span>
       {
         listSocialMedia.map( ({ id, icon: Icon, href }) => (
-          <Link to={href} className="icon" key={id}>
+          <a href={href} target='_blank' className="icon" key={id}>
             <i>
               {<Icon />}
             </i>
-          </Link>
+          </a>
         ) )
       }
     </ContentFooter>

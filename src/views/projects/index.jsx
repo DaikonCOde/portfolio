@@ -1,32 +1,37 @@
 import React from 'react'
 import {Helmet} from "react-helmet";
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import MovieApp from '../../assets/movie-app.png';
+import WeatherApp from '../../assets/weather-app.png';
+import Ecommerce from '../../assets/darly-store.png';
+
 
 import { ContentProjects } from './styles';
 
 const listProjects = [
   {
-    label: 'ui-animations',
-    photo: 'image.jpge',
-    description: 'Lorem ipsum dolor sit amet. ipsum dolor sit amet. sit amet. ipsum dolor sit amet. sit amet.',
-    href: '/',
-    technology: 'React',
+    label: 'web-de-películas',
+    photo: MovieApp,
+    description: 'Desarrolle una web donde puedes encontrar un sin fin de peliculas en tendencia. Para esto utilize la Api Rest de THE MOVIE DB',
+    href: 'https://eflix-movies.netlify.app/',
+    technology: 'React, Redux',
     id: 1
   },
   {
-    label: 'ui-animations',
-    photo: 'image.jpge',
-    description: 'Lorem ipsum dolor sit amet. ipsum dolor sit amet. sit amet. ipsum dolor sit amet. sit amet.',
-    href: '/',
-    technology: 'React',
+    label: 'web-de-clima',
+    photo: WeatherApp,
+    description: 'Proyecto realizado para mi certificación en el manejo de JS, este fue uno de mis primeros proyectos.',
+    href: 'https://weather-app-for-me.netlify.app/',
+    technology: 'Vanilla JS',
     id: 2
   },
   {
-    label: 'ui-animations',
-    photo: 'image.jpge',
-    description: 'Lorem ipsum dolor sit amet. ipsum dolor sit amet. sit amet. ipsum dolor sit amet. sit amet.',
-    href: '/',
-    technology: 'React',
+    label: 'ecommerce',
+    photo: Ecommerce,
+    description: 'Tienda virtual con base de datos en firebase, con inicio de sesión por roles, tambien se utilizo un manejador de estado como Redux.',
+    href: 'https://darly.store',
+    technology: 'React, firebase',
     id: 3
   }
 ]
@@ -39,7 +44,13 @@ const Projects = () => {
           <meta charSet="utf-8" />
           <title>Proyectos | Alex Ocsa </title>
       </Helmet>
-      <ContentProjects>
+      <ContentProjects
+        as={motion.section}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration:1, delay: 0.2 }}
+        exit={{ opacity: 0 }}
+      >
         <h4 className="label-section">_proyectos</h4>
 
         <div className="listProjects">
@@ -52,16 +63,17 @@ const Projects = () => {
                 </p>
                 <div className="card">
                   <div className="content-img">
-                    <img src="" alt="" />
+                    <img src={project.photo} alt={project.label} />
+                    <span className="technology">{project.technology}</span>
                   </div>
-                <div className="content-info">
-                  <p className="description">
-                    {project.description}
-                  </p>
-                  <Link to={ project.href } target='_blank' className='view-project' >
-                    ver-proyecto
-                  </Link>
-                </div>
+                  <div className="content-info">
+                    <p className="description">
+                      {project.description}
+                    </p>
+                    <a href={ project.href } target='_blank' className='view-project' >
+                      ver-proyecto
+                    </a>
+                  </div>
                 </div>
               </div>
             ))

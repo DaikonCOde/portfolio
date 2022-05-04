@@ -99,6 +99,9 @@ ${'' /* code */}
   .comment {
     color: ${ ({theme}) => theme.colors.secondary[6] };
   }
+  .label-comment {
+    color: ${ ({theme}) => theme.colors.secondary[4] };
+  }
   .code {
     margin: 10px 0;
     .const {

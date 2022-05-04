@@ -1,8 +1,20 @@
-import { ContentHome } from "./styles"
+import { ContentHome } from "./styles";
+
+import { motion } from "framer-motion";
+import MiCV from '../../assets/mi-cv.pdf';
 
 const Home = () => {
+
+  console.log(MiCV)
+
   return (
-    <ContentHome>
+    <ContentHome 
+      as={motion.section}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration:1}}
+      exit={{ opacity: 0 }}
+    >
       <div className="hero">
         <h4 className="label white">
           Hola. Yo soy 
@@ -24,7 +36,7 @@ const Home = () => {
           <span className="const">const </span>
           <span className="name">downloadMyCV</span>
           <span className="equal"> = </span>
-          <span className="value">"CV.pdf"</span>
+          <a href={ MiCV } download='mi-cv' target="_blank" rel="noopener noreferrer" className="value">"CV.pdf"</a>
         </p>
       </div>
     </ContentHome>

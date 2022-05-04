@@ -8,16 +8,12 @@ const listNav = [
     href: '/'
   },
   {
-    label: '_sobre-mi',
+    label: '_sobre_mi',
     href: '/about-me'
   },
   {
     label: '_proyectos',
     href: '/projects'
-  },
-  {
-    label: '_contactame',
-    href: '/contact-me'
   }
 ]
 
