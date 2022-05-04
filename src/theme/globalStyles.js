@@ -16,7 +16,15 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 15px;
     background: ${ ({theme}) => theme.colors.primary[1] };
-    
+    &::-webkit-scrollbar {
+      width: 8px;
+      background: ${ ({ theme }) => theme.colors.primary[1] }
+    }
+    &::-webkit-scrollbar-thumb {
+      width: 8px;
+      border-radius: 8px;
+      background: ${ ({ theme }) => theme.colors.primary[2] }
+    }
   }
 
 `

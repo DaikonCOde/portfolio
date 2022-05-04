@@ -21,13 +21,13 @@ const listProjects = [
   {
     label: 'web-de-clima',
     photo: WeatherApp,
-    description: 'Proyecto realizado para mi certificación en el manejo de JS, este fue uno de mis primeros proyectos.',
+    description: 'Proyecto realizado para mi certificación en el manejo de datos con JavaScript, este fue uno de mis primeros proyectos.',
     href: 'https://weather-app-for-me.netlify.app/',
     technology: 'Vanilla JS',
     id: 2
   },
   {
-    label: 'ecommerce',
+    label: 'e-commerce',
     photo: Ecommerce,
     description: 'Tienda virtual con base de datos en firebase, con inicio de sesión por roles, tambien se utilizo un manejador de estado como Redux.',
     href: 'https://darly.store',

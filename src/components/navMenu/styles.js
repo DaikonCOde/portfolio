@@ -18,7 +18,8 @@ export const ContentNavMenu = styled.div`
     li {
       padding: 18px;
       font-size: ${ ({theme}) => theme.font_size[16] };
-      color: ${ ({theme}) => theme.colors.secondary[4] }
+      color: ${ ({theme}) => theme.colors.secondary[6] };
+      font-weight: 600;
     }
   }
 

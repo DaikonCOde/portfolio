@@ -1,23 +1,9 @@
 import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import { ContentNavMenu } from "./styles"
 
-const listNav = [
-  {
-    label: '_hola',
-    href: '/'
-  },
-  {
-    label: '_sobre_mi',
-    href: '/about-me'
-  },
-  {
-    label: '_proyectos',
-    href: '/projects'
-  }
-]
 
-const NavMenu = ({ closeMenu }) => {
+const NavMenu = ({ closeMenu, listNav }) => {
   return (
     <ContentNavMenu
       as={ motion.div }
@@ -32,7 +18,13 @@ const NavMenu = ({ closeMenu }) => {
         {
           listNav.map(item => (
             <li key={item.label}>
-              <Link to={item.href} onClick={closeMenu} >{item.label}</Link>
+              <NavLink 
+                to={item.href}
+                className={({ isActive }) => isActive ? 'menu-active' : 'no hay clase'} 
+                onClick={closeMenu} 
+              >
+                {item.label}
+              </NavLink>
             </li>
           ))
         }

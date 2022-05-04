@@ -3,11 +3,16 @@ import styled from "styled-components";
 export const ContentProjects = styled.div`
   .listProjects {
     margin: 30px auto;
-
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-evenly;
   }
 
   .project {
     margin: 0 0 20px 0;
+    max-width: 300px;
+    height: 100%;
     .top {
       margin: 0 0 15px 0;
       .number-project {

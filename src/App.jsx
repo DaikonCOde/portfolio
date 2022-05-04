@@ -1,7 +1,7 @@
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, HashRouter } from 'react-router-dom';
 import Theme from './theme';
 
-import HeaderMobile from './components/headerMobile';
+import Header from './components/header';
 import Footer from './components/footer';
 
 import Router from './router';
@@ -9,15 +9,15 @@ import Router from './router';
 function App() {
   
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Theme>
       <div className="content-app">
-        <HeaderMobile />
+        <Header />
         <Router />
         <Footer />
       </div>
       </Theme>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 

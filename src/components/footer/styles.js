@@ -21,6 +21,10 @@ export const ContentFooter = styled.footer`
     border-left: 1px solid ${ ({theme}) => theme.colors.lines };
     i {
       color: ${ ({ theme }) => theme.colors.secondary[6] };
+      transition: all .3s linear;
+      &:hover {
+        color: ${ ({ theme }) => theme.colors.secondary[4] };
+      }
     }
   }
 `

@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { device } from "./breakpoints";
 
 export const GlobalClass = createGlobalStyle`
 
@@ -11,6 +12,17 @@ export const GlobalClass = createGlobalStyle`
     border-top: none;
     min-height: calc(100vh - 88px);
     padding: 20px;
+    @media ${ device.tablet } {
+      min-height: calc(100vh - 139px);
+      padding: 20px 50px;
+    }
+    @media ${ device.laptop } {
+      padding: 20px 150px;
+    }
+  }
+
+  .menu-active {
+    color: ${ ({ theme }) => theme.colors.secondary[4] };
   }
   h1, h2, h3, h4, h5, h6 {
     margin: 0;
