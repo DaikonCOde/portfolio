@@ -1,4 +1,4 @@
-import { BrowserRouter, HashRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import Theme from './theme';
 
 import Header from './components/header';
@@ -9,7 +9,7 @@ import Router from './router';
 function App() {
   
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Theme>
       <div className="content-app">
         <Header />
@@ -17,7 +17,7 @@ function App() {
         <Footer />
       </div>
       </Theme>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
