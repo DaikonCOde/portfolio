@@ -2,7 +2,7 @@ import { ContentHome } from "./styles";
 
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
-import MiCV from '../../assets/mi-cv.pdf';
+import MiCV from '../../assets/cv-alex-ocsa.pdf';
 import Code from '../../assets/code-snippet.svg';
 
 const Home = () => {
@@ -42,9 +42,9 @@ const Home = () => {
           <span className="comment">// descarga mi CV</span>
           <p className="code">
             <span className="const">const </span>
-            <span className="name">downloadMyCV</span>
+            <span className="name">CV</span>
             <span className="equal"> = </span>
-            <a href={ MiCV } download='mi-cv' target="_blank" rel="noopener noreferrer" className="value">"CV.pdf"</a>
+            <a href={ MiCV } download='mi-cv' target="_blank" rel="noopener noreferrer" className="value">downloadMyCV()</a>
           </p>
         </div>
       </ContentHome>
