@@ -1,24 +1,23 @@
-import { HashRouter } from 'react-router-dom';
-import Theme from './theme';
+import { BrowserRouter } from "react-router-dom";
+import Theme from "./theme";
 
-import Header from './components/header';
-import Footer from './components/footer';
+import Header from "./components/header";
+import Footer from "./components/footer";
 
-import Router from './router';
+import Router from "./router";
 
 function App() {
-  
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Theme>
-      <div className="content-app">
-        <Header />
-        <Router />
-        <Footer />
-      </div>
+        <div className="content-app">
+          <Header />
+          <Router />
+          <Footer />
+        </div>
       </Theme>
-    </HashRouter>
-  )
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
